@@ -2,7 +2,7 @@ import streamlit as st
 
 from openai import OpenAI
 
-client = OpenAI(api_key=APIKEY,organization=ORG)
+client = OpenAI(api_key=st.secrets["APIKEY"],organization=st.secrets["ORG"])
 
 
 def response(text):
